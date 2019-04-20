@@ -1,68 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+title: Greensock Animations using React Hooks
+published: false
+description: A quick example for how to use Greensock on demand animations with react hooks
+tags: gsap, greensock, react, hooks
+---
 
-## Available Scripts
+This is a brief tutorial on how to animate components on demand with Greensock and React hooks.
 
-In the project directory, you can run:
+We'll be using Create react app in this tutorial.
 
-### `npm start`
+To begin create a new app:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`create-react-app gsap-with-hooks`
+`cd gsap-with-hooks`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The only other dependency we will need for this tutorial is GSAP.
 
-### `npm test`
+`yarn add gsap`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the development server so that we can see our changes
 
-### `npm run build`
+`yarn start`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Since we will be adding our own animations here, remove the lines that animate the React Logo from `src/App.css`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+{% gist https://gist.github.com/billyjacoby/a7ceb8336e4a962ae6ee067e7059f98a %}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Looking at the development server, the logo should no longer be spinning.
 
-### `npm run eject`
+Now we're going to add three buttons to our app that Pause, Play, and Reverse our animation. We're also going to turn the App component into a functional component.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Your `App.js` should look similar to this after adding the buttons:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+{% gist https://gist.github.com/billyjacoby/301453e07f887d05b2a628ec8e922f0b %}
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Okay, now for the real work. In order to accomplish this correctly only using a functional component we will need to import useState, useRef, and useEffect from react.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Replace the `import React from "react";` line with:
 
-## Learn More
+`import React, {useState, useRef, useEffect} from "react";`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The first thing we'll do is create a new ref and store the react img logo in it. This will ensure that this node is loaded on the DOM before we try to animate it with Greensock.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+{% gist https://gist.github.com/billyjacoby/7cb7784103fabfa6d83c2cd48148d1ae %}
 
-### Code Splitting
+The next thing we'll do is create a react state object to store our animation function in. This will ensure that we are always accessing the already existing animation function as opposed to creating a new one.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+{% gist https://gist.github.com/billyjacoby/bf7134f3ea1bd8b22e6df8862f1628b3 %}
 
-### Analyzing the Bundle Size
+Next we have to use the useEffect hook to make sure that the animation is only created once the DOM has been rendered. We will create our animation function here and store it in our state object.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+{% gist https://gist.github.com/billyjacoby/2141a632d71dad008397f8107ce7e203 %}
 
-### Making a Progressive Web App
+Since we don't want our animation to play as soon as it's loaded, we throw the `.pause()` method on the end of it. This will enable us to control when it starts rather than just starting on loading.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+The last thing to do is to wire up our buttons to do their jobs!
 
-### Advanced Configuration
+{% https://gist.github.com/billyjacoby/abb69fbcd357cd6fb94af35bb33962f8 %}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Note that the reverse method basically rewinds the animation, so it will only work if the animation has been funning for a few seconds.
