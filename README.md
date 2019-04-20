@@ -1,9 +1,5 @@
----
-title: Greensock Animations using React Hooks
-published: false
-description: A quick example for how to use Greensock on demand animations with react hooks
-tags: gsap, greensock, react, hooks
----
+#Greensock Animations using React Hooks
+##description: A quick example for how to use Greensock on demand animations with react hooks
 
 This is a brief tutorial on how to animate components on demand with Greensock and React hooks.
 
