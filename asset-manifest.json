@@ -1,14 +1,14 @@
 {
-  "main.css": "//billyjacoby.github.io/gsap-with-hooks/static/css/main.dd23a06f.chunk.css",
-  "main.js": "//billyjacoby.github.io/gsap-with-hooks/static/js/main.6f5c7866.chunk.js",
-  "main.js.map": "//billyjacoby.github.io/gsap-with-hooks/static/js/main.6f5c7866.chunk.js.map",
-  "runtime~main.js": "//billyjacoby.github.io/gsap-with-hooks/static/js/runtime~main.872902f6.js",
-  "runtime~main.js.map": "//billyjacoby.github.io/gsap-with-hooks/static/js/runtime~main.872902f6.js.map",
-  "static/js/2.d63836dd.chunk.js": "//billyjacoby.github.io/gsap-with-hooks/static/js/2.d63836dd.chunk.js",
-  "static/js/2.d63836dd.chunk.js.map": "//billyjacoby.github.io/gsap-with-hooks/static/js/2.d63836dd.chunk.js.map",
-  "index.html": "//billyjacoby.github.io/gsap-with-hooks/index.html",
-  "precache-manifest.f4da8a18e17fec211337295b986ab1dd.js": "//billyjacoby.github.io/gsap-with-hooks/precache-manifest.f4da8a18e17fec211337295b986ab1dd.js",
-  "service-worker.js": "//billyjacoby.github.io/gsap-with-hooks/service-worker.js",
-  "static/css/main.dd23a06f.chunk.css.map": "//billyjacoby.github.io/gsap-with-hooks/static/css/main.dd23a06f.chunk.css.map",
-  "static/media/logo.svg": "//billyjacoby.github.io/gsap-with-hooks/static/media/logo.5d5d9eef.svg"
+  "main.css": "/gsap-with-hooks/static/css/main.dd23a06f.chunk.css",
+  "main.js": "/gsap-with-hooks/static/js/main.2b601566.chunk.js",
+  "main.js.map": "/gsap-with-hooks/static/js/main.2b601566.chunk.js.map",
+  "runtime~main.js": "/gsap-with-hooks/static/js/runtime~main.7fdc0ae9.js",
+  "runtime~main.js.map": "/gsap-with-hooks/static/js/runtime~main.7fdc0ae9.js.map",
+  "static/js/2.d63836dd.chunk.js": "/gsap-with-hooks/static/js/2.d63836dd.chunk.js",
+  "static/js/2.d63836dd.chunk.js.map": "/gsap-with-hooks/static/js/2.d63836dd.chunk.js.map",
+  "index.html": "/gsap-with-hooks/index.html",
+  "precache-manifest.051714c539b98448399fb9a5757bc4f7.js": "/gsap-with-hooks/precache-manifest.051714c539b98448399fb9a5757bc4f7.js",
+  "service-worker.js": "/gsap-with-hooks/service-worker.js",
+  "static/css/main.dd23a06f.chunk.css.map": "/gsap-with-hooks/static/css/main.dd23a06f.chunk.css.map",
+  "static/media/logo.svg": "/gsap-with-hooks/static/media/logo.5d5d9eef.svg"
 }

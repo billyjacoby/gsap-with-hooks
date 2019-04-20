@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "//billyjacoby.github.io/gsap-with-hooks/precache-manifest.f4da8a18e17fec211337295b986ab1dd.js"
+  "/gsap-with-hooks/precache-manifest.051714c539b98448399fb9a5757bc4f7.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("//billyjacoby.github.io/gsap-with-hooks/index.html", {
+workbox.routing.registerNavigationRoute("/gsap-with-hooks/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
