@@ -21,7 +21,8 @@ Start the development server so that we can see our changes
 
 Since we will be adding our own animations here, remove the lines that animate the React Logo from `src/App.css`
 
-`.App {
+```
+.App {
 text-align: center;
 }
 
@@ -55,7 +56,7 @@ to {
 transform: rotate(360deg);
 }
 } _/
-`
+```
 
 Looking at the development server, the logo should no longer be spinning.
 
